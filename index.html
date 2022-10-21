@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otorob</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    
+</head>
+<!-- TÜM ÖZELLEŞTİRMELER TAILWIND.CONFIG'DE YER ALIYOR -->
+<body>
+    <!-- Header -->
+    <header class=" text-titles font-poppins font-normal h-1/2 md:h-screen bg-slider2 md:bg-slider bg-cover  bg-center bg-no-repeat">
+        <div class="container md:mx-auto flex flex-wrap p-0 md:p-5 flex-row md:flex-row items-start md:items-center">
+          <span class="flex items-center mt-2 md:mt-1 mb-4 md:mb-0">
+            <img src="./images/logo.svg" alt="logo" class="container ml-3 md:ml-20 h-16 w-16" />
+          </span>
+         
+          <ul class="inline-flex ml-5 mt-6 md:mt-2  md:ml-auto md:mr-auto md:items-center md:justify-between items-center font-poppins justify-between gap-x-5 md:gap-x-12">
+            <li>
+                <a href="#" class=" text-titles hover:text-gray-900 font-poppins-500">Main Page</a>
+            </li>
+            <li>
+                <a href="#" class=" text-titles hover:text-gray-900 font-poppins-500">About</a>
+            </li> 
+            <li>
+                <a href="#" class=" text-titles hover:text-gray-900 font-poppins-500">Stores</a>
+            </li> 
+            <li>
+                <a href="#" class=" text-titles hover:text-gray-900 font-poppins-500">Contact</a>
+            </li> 
+            <li>
+                <a href="#" class=" text-titles hover:text-gray-900 font-poppins-500">Blog</a>
+            </li> 
+          </ul>    
+          <div class="grid grid-rows-2 gap-x-8 gap-y-3 md:flex items-center justify-between "> 
+            <a> <img class="w-4 h-4 invisible md:visible" src="/images/market.svg" alt="market icon"> </a>
+            <a> <img class="w-4 h-4 invisible md:visible" src="/images/search.svg" alt="search icon"> </a>
+            <div class="relative md:ml-0 ml-[420px] invisible md:visible ">
+                <input type="checkbox" id="sortbox" class="hidden absolute">
+                <label for="sortbox" class="flex items-center space-x-1 cursor-pointer">
+                <span class="text-sm">Eng</span>
+                <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </label>
+                <div id="sortboxmenu" class="absolute mt-1 right-1 top-full min-w-max shadow rounded opacity-0 bg-gray-300 border text-titles transition delay-75 ease-in-out z-10">
+                    <ul class="block text-right text-gray-900">
+                        <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Tr</a></li>
+                    </ul>
+                </div>
+        </div>
+        <button class="invisible md:visible items-center text-center  md:ml-0 bg-titles h-14 w-28 rounded-xl border-0 py-1 text-white focus:outline-none mt-4 md:mt-0">Sign In
+        </button>
+         </div>
+         </div>
+         <!-- Slider --> 
+         <div class="md:w-[800px] md:h-72 w-72 h-20">  
+         </div>
+           <div class="absolute"> 
+            <p class="relative text-sm text-white w-52 md:w-96 h-10 md:h-20 font-normal font-poppins -mt-40 md:-mt-10 ml-3 md:ml-24"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+            <div class="md:pl-24 mt-8 invisible md:visible">
+                <img src="/images/qr.svg">
+              </div>
+              <div class="-mt-[90px] ml-52 invisible md:visible ">
+                <a href="#"> <img  class=" mb-4" src="/images/googleplay.svg"> </a>
+                <a href="#"> <img class="" src="/images/apple.svg"> </a>
+                </div>
+           </div>
+         
+      </header>
+       <!-- Products Search Bar -->
+    <div class="flex flex-wrap" id="tabs-id">
+  <div class=" ml-2 md:ml-28 w-96 md:w-[500px] h-72 mt-4 md:mt-10">
+    <ul class="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row">
+      <li class="mr-0 flex-auto text-center">
+        <a class="text-xs font-normal  px-5 py-3 shadow-lg rounded block leading-normal text-white bg-titles" onclick="changeAtiveTab(event,'tab-profile')">
+          <h2 class=" text-base mr-1"> Auto Parts</h2>  
+        </a>
+      </li>
+      <li class="-mb-px -ml-3 flex-auto text-center">
+        <a class="text-xs font-normal  px-5 py-3 shadow-lg rounded block leading-normal text-yellow-50 bg-gray-500" onclick="changeAtiveTab(event,'tab-settings')">
+          <h2 class=" text-base mr-1"> Accessories </h2>  
+        </a>
+      </li>
+      <li class="-mb-px  flex-auto text-center">
+        <a class="text-xs font-normal px-1 py-3 shadow-lg rounded block leading-normal text-yellow-50 bg-gray-500" onclick="changeAtiveTab(event,'tab-options')">
+          <h2 class="text-base mr-1"> Search by VIN code </h2>
+        </a>
+      </li>
+    </ul>
+    <div class="-mt-5 text-white font-normal font-poppins flex flex-col md:min-w-0 break-words bg-titles w-[460px] md:w-[800px] mb-6 shadow-lg rounded ">
+      <div class="px-3 md:px-4 py-1 md:py-5 flex-auto">
+        <div class="tab-content tab-space">
+          <div class="flex flex-row gap-x-2 md:gap-x-12" id="tab-profile">
+            <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                <button @click="open = !open" class=" bg-titles text-white flex flex-row items-center w-full px-1 md:px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none">
+                  <span>Brand</span>
+                  <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute h-72 w-full mt-0 origin-top-left rounded-md shadow-lg md:w-48">
+                  <div class="px-2 py-2 bg-titles text-white text-xs font-poppins font-normal rounded-md shadow">
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Abarth</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Alfa Romeo</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Aprilia</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Abarth</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Abarth</a>
+                  </div>
+                </div>
+              </div>
+              <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                <button @click="open = !open" class=" bg-titles text-white flex flex-row items-center w-full px-1 md:px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none">
+                  <span>Model</span>
+                  <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute h-72 w-full mt-0 origin-top-left rounded-md shadow-lg md:w-48">
+                  <div class="px-2 py-2 bg-titles text-white text-xs font-poppins font-normal rounded-md shadow">
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Abarth</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Alfa Romeo</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Aprilia</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Abarth</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Abarth</a>
+                  </div>
+                </div>
+              </div>
+              <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                <button @click="open = !open" class=" bg-titles text-white flex flex-row items-center w-full px-1 md:px-2 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none">
+                  <span>Year-from-to</span>
+                  <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute h-72 w-full mt-0 origin-top-left rounded-md shadow-lg md:w-48">
+                  <div class="px-2 py-2 bg-titles text-white text-xs font-poppins font-normal rounded-md shadow">
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Abarth</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Alfa Romeo</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Aprilia</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Abarth</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Abarth</a>
+                  </div>
+                </div>
+              </div>
+              <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                <button @click="open = !open" class=" bg-titles text-white flex flex-row items-center w-full ğx-1 md:px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none">
+                  <span>Body</span>
+                  <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute h-72 w-full mt-0 origin-top-left rounded-md shadow-lg md:w-48">
+                  <div class="px-2 py-2 bg-titles text-white text-xs font-poppins font-normal rounded-md shadow">
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Abarth</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Alfa Romeo</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Aprilia</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Abarth</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Abarth</a>
+                  </div>
+                </div>
+              </div>
+              <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                <button @click="open = !open" class=" bg-titles text-white flex flex-row items-center w-full px-1 md:px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none">
+                  <span>Engine</span>
+                  <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute h-72 w-full mt-0 origin-top-left rounded-md shadow-lg md:w-48">
+                  <div class="px-2 py-2 bg-titles text-white text-xs font-poppins font-normal rounded-md shadow">
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Abarth</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Alfa Romeo</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Aprilia</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Abarth</a>
+                    <a class="block px-4 py-2 mt-2   rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Abarth</a>
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+          <div class="hidden" id="tab-settings">
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+            </p>
+          </div>
+          <div class="hidden" id="tab-options">
+           <form> 
+            <div class="relative w-96 md:w-full">
+            <input type="search" class="block md:m-0 m-2 p-2.5 w-full z-20 text-sm text-gray-800 bg-gray-300 rounded-r-lg  " required>
+            <button type="submit" class="absolute top-0 right-0 -mr-2 md:-mr-0 md:ml-0 px-10 py-3 text-xs font-normal text-white bg-price rounded-r-lg  ">
+           Search </button>
+        </div>
+     </form> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+       <!-- Product Cards -->
+       <div class="bg-white container ml-8 md:ml-7 md:mx-auto grid gap-2 grid-cols-1 md:grid-cols-2 grid-rows-3 justify-center items-center"> 
+        <div class="w-96 h-[400px] md:w-[588px] md:h-[293px]  p-2 ml-3 md:ml-14  bg-gray-100 rounded-3xl md:mx-auto my-3 transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
+            <img class="h-[243px] w-[246px] object-cover rounded-2xl float-left p-3 md:mx-auto md:ml-6  " src="/images/teker1.png" alt="product1">
+            <div class="p-2 flex-row  font-poppins font-normal pl-8">
+            <h2 class="text-base pt-5 underline text-titles font-medium font-poppins "> Avant Forged </h2>
+            <h3 class="text-xs text-titles font-poppins"> Forged </h3>
+            <h1 class=" text-2xl text-price font-poppins md:float-none font-bold"> $1.700 </h1>
+            <h3 class="text-xs text-titles font-poppins md:float-left"> Review:   
+                    <div class="flex items-center float-left md:float-right ">
+                        <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Third star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg aria-hidden="true" class="w-4 h-4 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20" ><title>Fifth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>    
+            </h3> <br/>
+            <p class="text-opacity-70 -mt-4 md:mt-2 text-titles font-poppins font-normal text-xs"> Supplier Name / Code From USA </p>
+            <p class="text-sm text-ship font-poppins mt-1"> Shipped in 3-5 days </p>
+            <button href="#"
+			class="text-white h-14 w-40 bg-price hover:bg-price focus:ring-4 rounded-xl mt-6 md:mt-6 ml-16 md:ml-0  px-10 md:px-5 py-2.5 text-center font-poppins font-medium text-base  ">Add to cart</button>
+            </div>
+
+       </div>
+       <div class="w-96 h-[400px] md:w-[588px] md:h-[293px]  p-2 ml-3 md:ml-14  bg-gray-100 rounded-3xl md:mx-auto my-3 transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
+        <img class="h-[243px] w-[246px] object-cover rounded-2xl float-left p-3 md:mx-auto md:ml-6  " src="/images/teker1.png" alt="product1">
+        <div class="p-2 flex-row  font-poppins font-normal pl-8">
+        <h2 class="text-base pt-5 underline text-titles font-medium font-poppins "> Avant Forged </h2>
+        <h3 class="text-xs text-titles font-poppins"> Forged </h3>
+        <h1 class=" text-2xl text-price font-poppins md:float-none font-bold"> $1.700 </h1>
+        <h3 class="text-xs text-titles font-poppins md:float-left"> Review:   
+                <div class="flex items-center float-left md:float-right ">
+                    <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Third star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg aria-hidden="true" class="w-4 h-4 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20" ><title>Fifth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                </div>    
+        </h3> <br/>
+        <p class="text-opacity-70 -mt-4 md:mt-2 text-titles font-poppins font-normal text-xs"> Supplier Name / Code From USA </p>
+        <p class="text-sm text-ship font-poppins mt-1"> Shipped in 3-5 days </p>
+        <button href="#"
+        class="text-white h-14 w-40 bg-price hover:bg-price focus:ring-4 rounded-xl mt-6 md:mt-6 ml-16 md:ml-0  px-10 md:px-5 py-2.5 text-center font-poppins font-medium text-base  ">Add to cart</button>
+        </div>
+
+   </div>
+   <div class="w-96 h-[400px] md:w-[588px] md:h-[293px]  p-2 ml-3 md:ml-14  bg-gray-100 rounded-3xl md:mx-auto my-3 transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
+    <img class="h-[243px] w-[246px] object-cover rounded-2xl float-left p-3 md:mx-auto md:ml-6  " src="/images/teker1.png" alt="product1">
+    <div class="p-2 flex-row  font-poppins font-normal pl-8">
+    <h2 class="text-base pt-5 underline text-titles font-medium font-poppins "> Avant Forged </h2>
+    <h3 class="text-xs text-titles font-poppins"> Forged </h3>
+    <h1 class=" text-2xl text-price font-poppins md:float-none font-bold"> $1.700 </h1>
+    <h3 class="text-xs text-titles font-poppins md:float-left"> Review:   
+            <div class="flex items-center float-left md:float-right ">
+                <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Third star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-4 h-4 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20" ><title>Fifth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            </div>    
+    </h3> <br/>
+    <p class="text-opacity-70 -mt-4 md:mt-2 text-titles font-poppins font-normal text-xs"> Supplier Name / Code From USA </p>
+    <p class="text-sm text-ship font-poppins mt-1"> Shipped in 3-5 days </p>
+    <button href="#"
+    class="text-white h-14 w-40 bg-price hover:bg-price focus:ring-4 rounded-xl mt-6 md:mt-6 ml-16 md:ml-0  px-10 md:px-5 py-2.5 text-center font-poppins font-medium text-base  ">Add to cart</button>
+    </div>
+
+</div>
+<div class="w-96 h-[400px] md:w-[588px] md:h-[293px]  p-2 ml-3 md:ml-14  bg-gray-100 rounded-3xl md:mx-auto my-3 transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
+    <img class="h-[243px] w-[246px] object-cover rounded-2xl float-left p-3 md:mx-auto md:ml-6  " src="/images/teker1.png" alt="product1">
+    <div class="p-2 flex-row  font-poppins font-normal pl-8">
+    <h2 class="text-base pt-5 underline text-titles font-medium font-poppins "> Avant Forged </h2>
+    <h3 class="text-xs text-titles font-poppins"> Forged </h3>
+    <h1 class=" text-2xl text-price font-poppins md:float-none font-bold"> $1.700 </h1>
+    <h3 class="text-xs text-titles font-poppins md:float-left"> Review:   
+            <div class="flex items-center float-left md:float-right ">
+                <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Third star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-4 h-4 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20" ><title>Fifth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            </div>    
+    </h3> <br/>
+    <p class="text-opacity-70 -mt-4 md:mt-2 text-titles font-poppins font-normal text-xs"> Supplier Name / Code From USA </p>
+    <p class="text-sm text-ship font-poppins mt-1"> Shipped in 3-5 days </p>
+    <button href="#"
+    class="text-white h-14 w-40 bg-price hover:bg-price focus:ring-4 rounded-xl mt-6 md:mt-6 ml-16 md:ml-0  px-10 md:px-5 py-2.5 text-center font-poppins font-medium text-base  ">Add to cart</button>
+    </div>
+
+</div>
+<div class="w-96 h-[400px] md:w-[588px] md:h-[293px]  p-2 ml-3 md:ml-14  bg-gray-100 rounded-3xl md:mx-auto my-3 transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
+    <img class="h-[243px] w-[246px] object-cover rounded-2xl float-left p-3 md:mx-auto md:ml-6  " src="/images/teker1.png" alt="product1">
+    <div class="p-2 flex-row  font-poppins font-normal pl-8">
+    <h2 class="text-base pt-5 underline text-titles font-medium font-poppins "> Avant Forged </h2>
+    <h3 class="text-xs text-titles font-poppins"> Forged </h3>
+    <h1 class=" text-2xl text-price font-poppins md:float-none font-bold"> $1.700 </h1>
+    <h3 class="text-xs text-titles font-poppins md:float-left"> Review:   
+            <div class="flex items-center float-left md:float-right ">
+                <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Third star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-4 h-4 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20" ><title>Fifth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            </div>    
+    </h3> <br/>
+    <p class="text-opacity-70 -mt-4 md:mt-2 text-titles font-poppins font-normal text-xs"> Supplier Name / Code From USA </p>
+    <p class="text-sm text-ship font-poppins mt-1"> Shipped in 3-5 days </p>
+    <button href="#"
+    class="text-white h-14 w-40 bg-price hover:bg-price focus:ring-4 rounded-xl mt-6 md:mt-6 ml-16 md:ml-0  px-10 md:px-5 py-2.5 text-center font-poppins font-medium text-base  ">Add to cart</button>
+    </div>
+
+</div>
+<div class="w-96 h-[400px] md:w-[588px] md:h-[293px]  p-2 ml-3 md:ml-14  bg-gray-100 rounded-3xl md:mx-auto my-3 transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
+    <img class="h-[243px] w-[246px] object-cover rounded-2xl float-left p-3 md:mx-auto md:ml-6  " src="/images/teker1.png" alt="product1">
+    <div class="p-2 flex-row  font-poppins font-normal pl-8">
+    <h2 class="text-base pt-5 underline text-titles font-medium font-poppins "> Avant Forged </h2>
+    <h3 class="text-xs text-titles font-poppins"> Forged </h3>
+    <h1 class=" text-2xl text-price font-poppins md:float-none font-bold"> $1.700 </h1>
+    <h3 class="text-xs text-titles font-poppins md:float-left"> Review:   
+            <div class="flex items-center float-left md:float-right ">
+                <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Third star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" ><title>Fourth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg aria-hidden="true" class="w-4 h-4 text-gray-300 dark:text-gray-500" fill="currentColor" viewBox="0 0 20 20" ><title>Fifth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            </div>    
+    </h3> <br/>
+    <p class="text-opacity-70 -mt-4 md:mt-2 text-titles font-poppins font-normal text-xs"> Supplier Name / Code From USA </p>
+    <p class="text-sm text-ship font-poppins mt-1"> Shipped in 3-5 days </p>
+    <button href="#"
+    class="text-white h-14 w-40 bg-price hover:bg-price focus:ring-4 rounded-xl mt-6 md:mt-6 ml-16 md:ml-0  px-10 md:px-5 py-2.5 text-center font-poppins font-medium text-base  ">Add to cart</button>
+    </div>
+
+</div> 
+       <div class="bg-white w-full h-36"> </div>
+       <button onclick="toggleText()" id="button" class=" rounded-xl ml-10 md:-ml-52 mr-32 md:mr-96 -mt-40 md:mt-3 px-2 py-2 h-14 bg-titles text-center  text-white duration-300 hover:bg-titles">Load more</button>
+</div>
+    
+       <!-- CUSTOM WHEELS -->
+       <div class=" h-52 md:h-[540px] w-full">
+        <img src="/images/custom.svg" class="absolute"> 
+        <img src="/images/customWheels.svg" class="absolute items-center  md:mx-auto right-0 md:right-1/3 md:pt-52 pt-5 ">       
+        <button type="button" class= "absolute text-price hover:text-white border border-price hover:bg-price focus:ring-4 focus:outline-none items-center md:ml-[540px] ml-40 py-4 md:py-7 px-7 md:px-20 mt-20 md:mt-72 focus:ring-blue-300 font-medium rounded-lg text-base text-center "> Shop Now </button>
+    </div>
+
+        <!-- Brands list -->
+       <div class="bg-white w-full h-[780px] md:h-96">
+        <div class="grid grid-cols-2 gap-10 md:gap-x-36 py-2 md:py-10 px-2 md:px-44 md:grid-cols-4">
+            <div>
+                <h2 class="mb-7 text-xl md:text-2xl font-medium font-poppins text-price w-80 "> Popular Brands </h2>
+                <ul class="text-black grid grid-cols-2 md:grid-rows-6 gap-y-0 gap-x-1 md:gap-x-24 md:grid-cols-5 text-opacity-60 text-sm font-poppins font-normal">
+                    <li class="mb-4">
+                        <p>Aprilia</p>
+                    </li>
+                    <li class="mb-4 md:w-52">
+                        <p>Can-am</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Genesis</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Infiniti</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Mazda</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>ATV</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Cevo</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Geely</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Isuzu</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Mercedes</p>
+                    </li>
+                     <li class="mb-4">
+                        <p>Audi</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Chagan</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>GAZ</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Italcar</p>
+                    </li>
+                    <li class="mb-4 md:w-44">
+                        <p>Mercedes-Maybach</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Avia</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Chery</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>GAC</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Iveco</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Mini</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Baic</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Chevrolet</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>GMC</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>JAC</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Mitsubishi</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Bajaj</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Chrysler</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Audi</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Haima</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Jaguar</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Peugeot</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Bentley</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Haouje</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Kawasaki</p>
+                    </li>
+                    <li class="mb-4">
+                        <p>Porsche</p>
+                    </li>
+
+                    
+                    
+                </ul>
+            </div>
+            <div class="md:ml-[440px]">
+                  <h2 class="mb-7 text-xl md:text-2xl font-medium font-poppins text-price w-80">Popular Categories </h2>
+                <ul class="text-black grid grid-cols-1 gap-y-0 gap-x-24 w-32 md:w-72 md:grid-cols-1 text-opacity-60 text-sm font-poppins font-normal">
+                    <li class="mb-4">
+                        <a href="#">Spare parts and accessories</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" >Audio and video technology</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" >Car chemisry and auto cosmetics</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#"> Diagnostic devices</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#"> GPS navigator </a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#"> Tires, discs, wheels </a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#"> Other </a>
+                    </li>
+                </ul> 
+            </div> 
+            </div>
+       </div>
+
+       <!-- Footer -->
+
+       <div class="bg-footer bg-cover bg-no-repeat">
+       <div>
+        <img src="/images/logo2.svg" class="w-36 h-28 ml-3 md:ml-40 absolute mt-24 ">
+       </div>
+        <div class="max-w-2xl mx-auto text-white py-10 grid grid-col-4  ">
+            <div class="container p-6">
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 mt-5">
+                  <div class="mb-7 ml-52 md:ml-20 w-40 h-52">
+                    <h3 class="font-poppins text-base font-semibold mb-2.5 text-white">Corporate</h3>
+                    <ul class="list-none text-white font-poppins font-normal text-base">
+                      <li>
+                        <a href="#" class="  "> Shipping & Return </a>
+                      </li>
+                      <li>
+                        <a href="#" class="">About Us </a>
+                      </li>
+                      <li>
+                        <a href="#" class=""> Help & Contact </a>
+                      </li>
+                      <li>
+                        <a href="#" class="">Data Preferences</a>
+                      </li>
+                      <li>
+                        <a href="#" class="">Privacy & Policy</a>
+                      </li>
+                      <li>
+                        <a href="#" class="">Terms of use</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="mb-6">
+                    <img src="/images/shopping.svg" class="-ml-2 md:ml-52 -mt-1"> 
+                    </div>
+                    <div class="mb-6 ml-20 md:ml-96 w-20">
+                        <h3 class="-ml-20 md:ml-0 text-white font-poppins font-normal text-base">Follow Us</h3>
+                      <div class="-ml-20 md:ml-0">
+                        <ul class="mt-6 grid grid-cols-4 gap-x-3 w-32 items-center">
+                            <li>
+                                <a href="#"> <img src="/images/facebook.svg"> </a>
+                            </li>
+                            <li>
+                                <a href="#"> <img src="/images/instagram.svg"> </a>
+                            </li>
+                            <li>
+                                <a href="#"> <img src="/images/twitter.svg"> </a>
+                            </li>
+                            <li>
+                                <a href="#"> <img src="/images/youtube.svg"> </a>
+                            </li>
+                        </ul>
+                      </div>  
+                      <div class="-ml-20 md:ml-0 mt-14">
+                        <img src="/images/qr.svg">
+                      </div>
+                      <div class="md:-mt-20">
+                        <a href="#"> <img  class="mt-4 md:mt-0 -ml-20 md:ml-28 mb-4" src="/images/googleplay.svg"> </a>
+                        <a href="#"> <img class="mt-4 md:mt-0 -ml-20 md:ml-28" src="/images/apple.svg"> </a>
+                        </div>
+                    </div>
+                  </div>
+                    </div>
+            
+                   </div>
+        </div>
+        
+       </div>
+       
+       </div>
+
+
+<script type="text/javascript">
+  function changeAtiveTab(event,tabID){
+    let element = event.target;
+    while(element.nodeName !== "A"){
+      element = element.parentNode;
+    }
+    ulElement = element.parentNode.parentNode;
+    aElements = ulElement.querySelectorAll("li > a");
+    tabContents = document.getElementById("tabs-id").querySelectorAll(".tab-content > div");
+    for(let i = 0 ; i < aElements.length; i++){
+      aElements[i].classList.remove("text-white");
+      aElements[i].classList.remove("bg-titles");
+      aElements[i].classList.add("text-yellow-50");
+      aElements[i].classList.add("bg-gray-500");
+      tabContents[i].classList.add("hidden");
+      tabContents[i].classList.remove("block");
+    }
+    element.classList.remove("text-yellow-50");
+    element.classList.remove("bg-gray-500");
+    element.classList.add("text-white");
+    element.classList.add("bg-titles");
+    document.getElementById(tabID).classList.remove("hidden");
+    document.getElementById(tabID).classList.add("block");
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</body>
+</html>
