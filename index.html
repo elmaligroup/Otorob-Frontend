@@ -14,7 +14,7 @@
 <!-- TÜM ÖZELLEŞTİRMELER TAILWIND.CONFIG'DE YER ALIYOR -->
 <body>
     <!-- Header -->
-    <header class=" text-titles font-poppins font-normal h-1/2 md:h-screen bg-slider2 md:bg-slider bg-cover  bg-center bg-no-repeat">
+    <header id="navbar" class=" text-titles font-poppins font-normal h-1/2 md:h-screen bg-slider2 md:bg-slider bg-cover  bg-center bg-no-repeat">
         <div class="container md:mx-auto flex flex-wrap p-0 md:p-5 flex-row md:flex-row items-start md:items-center">
           <span class="flex items-center mt-2 md:mt-1 mb-4 md:mb-0">
             <img src="./images/logo.svg" alt="logo" class="container ml-3 md:ml-20 h-16 w-16" />
@@ -486,13 +486,13 @@
        <!-- Footer -->
 
        <div class="bg-footer bg-cover bg-no-repeat">
-       <div>
-        <img src="/images/logo2.svg" class="w-36 h-28 ml-3 md:ml-40 absolute mt-24 ">
-       </div>
-        <div class="max-w-2xl mx-auto text-white py-10 grid grid-col-4  ">
-            <div class="container p-6">
-                <div class="grid lg:grid-cols-4 md:grid-cols-2 mt-5">
-                  <div class="mb-7 ml-52 md:ml-20 w-40 h-52">
+        <div class="w-full mx-auto text-white py-10 ">
+            <div class="container p-10">
+                <div class="flex flex-row justify-between mt-5 flex-wrap space-x-10">
+                    <div>
+                        <img src="/images/logo2.svg" class="w-40 mx-auto ">
+                       </div>
+                  <div class="mb-7 w-40 h-52">
                     <h3 class="font-poppins text-base font-semibold mb-2.5 text-white">Corporate</h3>
                     <ul class="list-none text-white font-poppins font-normal text-base">
                       <li>
@@ -515,13 +515,13 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="mb-6">
-                    <img src="/images/shopping.svg" class="-ml-2 md:ml-52 -mt-1"> 
+                  <div class="mb-7 w-40 h-52 ">
+                    <img src="/images/shopping.svg" class=""> 
                     </div>
-                    <div class="mb-6 ml-20 md:ml-96 w-20">
-                        <h3 class="-ml-20 md:ml-0 text-white font-poppins font-normal text-base">Follow Us</h3>
-                      <div class="-ml-20 md:ml-0">
-                        <ul class="mt-6 grid grid-cols-4 gap-x-3 w-32 items-center">
+                    <div class="mb-7 w-40 h-52 flex flex-col space-y-5 ">
+                        <h3 class=" text-white font-poppins font-normal text-base">Follow Us</h3>
+                      <div class="">
+                        <ul class="flex flex-row space-x-3 w-32 items-center">
                             <li>
                                 <a href="#"> <img src="/images/facebook.svg"> </a>
                             </li>
@@ -536,22 +536,21 @@
                             </li>
                         </ul>
                       </div>  
-                      <div class="-ml-20 md:ml-0 mt-14">
+                      <div class=" flex flex-row flex-wrap space-y-4 w-40 ">
                         <img src="/images/qr.svg">
+                        <div class=" flex flex-col space-y-3 ">
+                            <a href="#"> <img  class="" src="/images/googleplay.svg"> </a>
+                            <a href="#"> <img class="" src="/images/apple.svg"> </a>
+                            </div>
                       </div>
-                      <div class="md:-mt-20">
-                        <a href="#"> <img  class="mt-4 md:mt-0 -ml-20 md:ml-28 mb-4" src="/images/googleplay.svg"> </a>
-                        <a href="#"> <img class="mt-4 md:mt-0 -ml-20 md:ml-28" src="/images/apple.svg"> </a>
-                        </div>
+                      
                     </div>
                   </div>
                     </div>
             
                    </div>
         </div>
-        
        </div>
-       
        </div>
 
 
