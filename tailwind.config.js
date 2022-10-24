@@ -3,6 +3,8 @@ module.exports = {
   content: ["./Pages/*", "index.html"],
   theme: {
     screens: {
+      '2xs': '262px',
+      'xs': '360px',
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',
@@ -17,6 +19,9 @@ module.exports = {
   },
     
     extend: { 
+      width: {
+        '128': '32rem',
+      },
       colors: {
       titles: "#020044",
       price: "#0000A2",

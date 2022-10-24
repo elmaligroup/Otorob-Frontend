@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class=" ">
-        <h1 class="font-poppins font-semibold text-titles text-2xl p-10"> Vendor's Registration </h1>
+        <h1 class="font-poppins font-semibold text-titles text-2xl pt-10 px-1 md:px-44"> Vendor's Registration </h1>
  <!-- Customer -->
         <div class="bg-white min-h-screen w-full flex flex-col">
             <div class="container md:w-1/2 w-full mx-auto space-y-3 flex-1 flex flex-col items-center justify-center px-2">
@@ -21,14 +21,15 @@
                     <div class="overflow-hidden mx-auto items-center w-40 h-40 bg-gray-200 rounded-full">
                         <img class="items-center mx-auto mt-5" src="/images/avatar.svg">
                     </div>
-                <label class="text-titles font-poppins flex mx-auto items-center justify-center mt-2 " for="avatar"> Add Photo
-                    <input  
+                <label class="text-titles font-poppins flex mx-auto items-center justify-center mt-2 cursor-pointer " for="avatar"> Add Photo
+                  <input  
                         type="file" accept="image/*" 
                         class="hidden cursor-pointer " 
                         name="avatar"
                         id="avatar"/>  
                 </label>
                     <h1 class="mb-8 mt-2 text-3xl text-center"> Personal Information</h1>
+                    <form> 
                     <input 
                         type="text"
                         class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
@@ -70,13 +71,14 @@
                         class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-5  text-sm font-poppins"
                         name="fullname"
                         placeholder="Gender" />
-
+                      </form>
                     <button
                         type="submit"
                         class="w-full text-center py-3 rounded-xl bg-titles font-poppins font-normal text-white focus:outline-none my-1"
                     >Verify</button>
  <!-- Company -->
                     <h1 class="mb-8 mt-20 text-3xl text-center text-black text-opacity-40"> Company Information</h1>
+                    <form> 
                     <input 
                         type="text"
                         class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
@@ -118,17 +120,17 @@
                         class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
                         name="fullname"
                         placeholder="E-mail" />
-
+                      </form>
                     <button
                         type="submit"
-                        class="w-full text-center py-3 rounded-xl bg-black bg-opacity-40 font-poppins font-normal text-white focus:outline-none my-1"
+                        class="w-full text-center py-3 rounded-xl bg-black bg-opacity-40 font-poppins font-normal  text-white focus:outline-none my-1"
                     >Verify</button>  
                 </div>
             </div>
         </div>
     </div>
     <!-- FOOTER -->
-    <div class="bg-footer bg-cover bg-no-repeat">
+    <div class="bg-footer bg-cover bg-no-repeat mt-14">
       <div class="w-full mx-auto text-white">
           <div class="container p-10 mx-auto">
               <div class="flex flex-row justify-around mt-5 flex-wrap">
