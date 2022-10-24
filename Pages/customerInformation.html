@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Page</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrap w-full h-full bg-white">
+        <h1 class="font-poppins text-black text-3xl text-center pt-10"> Customer Information</h1>
+         <div class="container h-max mx-auto flex flex-row w-4/5 items-center space-x-0 bg-white py-8 md:py-10">
+               <div class="w-2/6 md:w-1/6 bg-white h-screen">
+                <ul class="list-none text-center font-poppins font-medium text-base text-black text-opacity-30">
+                    <li class=" hover:text-titles active:text-titles hover:shadow-sm cursor-pointer"> <a href="#"> Personal Information </a> </li>
+                    <li class=" hover:text-titles active:text-titles hover:shadow-sm cursor-pointer"> <a href="#"> Messages </a> </li>
+                    <li class=" hover:text-titles active:text-titles hover:shadow-sm cursor-pointer"> <a href="#"> Orders </a> </li>
+                    <li class=" hover:text-titles active:text-titles hover:shadow-sm  cursor-pointer"> <a href="#"> Settings </a> </li>
+                </ul>
+               </div>
+               <div class="w-4/6 md:w-5/6 bg-white" >
+                <div class="bg-white min-h-screen w-full flex flex-col">
+                <div class="container md:w-1/2 w-full mx-auto md:mx-32 space-y-3 flex flex-col items-center justify-center px-2">
+                <div class="bg-white px-6  rounded text-titles w-full">
+                    <div class="flex overflow-ellipsis absolute bg-price blur-[250px] w-48 h-48  "></div>
+                    <div class="overflow-hidden mx-auto items-center w-40 h-40 bg-gray-200 rounded-full">
+                        <img class="items-center mx-auto mt-5" src="/images/avatar.svg">
+                    </div>
+                <label class="text-titles font-poppins flex mx-auto items-center justify-center mt-2 mb-6 " for="avatar"> Add Photo
+                    <input  
+                        type="file" accept="image/*" 
+                        class="hidden cursor-pointer " 
+                        name="avatar"
+                        id="avatar"/>  
+                </label>
+                    <input 
+                        type="text"
+                        class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
+                        name="fullname"
+                        placeholder="Name" />
+
+                        <input 
+                        type="text"
+                        class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-12 text-sm font-poppins"
+                        name="fullname"
+                        placeholder="Surname" />
+
+                        <input 
+                        type="email"
+                        class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
+                        name="fullname"
+                        placeholder="Email" />
+
+                        <input 
+                        type="text"
+                        class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
+                        name="fullname"
+                        placeholder="ID" />
+                        
+                        <input 
+                        type="tel"
+                        class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
+                        name="fullname"
+                        placeholder="Phone" />
+                        
+                        <input 
+                        type="text"
+                        class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
+                        name="fullname"
+                        placeholder="Birth Date" />
+
+                        <input 
+                        type="text"
+                        class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
+                        name="fullname"
+                        placeholder="Gender" />
+
+                    <button
+                        type="submit"
+                        class="w-full text-center py-3 rounded-xl bg-titles font-poppins font-normal text-white focus:outline-none my-1"
+                    >Verify</button> 
+                </div>
+                </div>
+                </div>
+               </div>
+         </div>
+    </div>
+</body>
+</html>

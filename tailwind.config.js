@@ -20,7 +20,8 @@ module.exports = {
       colors: {
       titles: "#020044",
       price: "#0000A2",
-      ship: "#096301"
+      ship: "#096301",
+      lightblue: "#4267B2"
     },
     fontFamily: { 
       poppins: "'Poppins', sans-serif",
