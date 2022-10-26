@@ -19,8 +19,10 @@ module.exports = {
   },
     
     extend: { 
-      width: {
-        '128': '32rem',
+      margin: {
+        '420': '26.25rem',
+        '660': '41.25rem',
+        'on': '0.625rem'
       },
       colors: {
       titles: "#020044",

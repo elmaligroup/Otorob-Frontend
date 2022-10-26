@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Page</title>
+    <title>Vendor's Information</title>
     <link href="/dist/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,77 +13,79 @@
 <body>
     <div class="wrap w-full h-full bg-white">
       <div class="container h-max mx-5 xs:mx-auto flex flex-col md:flex-row space-y-5  w-11/12 space-x-0 bg-white py-0 xs:py-10">
-        <div class="w-2/6 md:w-1/6 bg-white h-min mx-auto md:mx-0 pt-10">
+        <div class="w-6/6 md:w-1/6 bg-white h-min mx-auto md:mx-0 sm:pt-10">
           <ul class="list-none text-center font-poppins font-medium text-base text-black text-opacity-30 pt-10">
-            <li class=" hover:text-titles active:text-titles hover:shadow-sm cursor-pointer mb-5"> <a href="#"> Personal Information </a> </li>
-            <li class=" hover:text-titles active:text-titles hover:shadow-sm cursor-pointer mb-5"> <a href="#"> Messages </a> </li>
-            <li class=" hover:text-titles active:text-titles hover:shadow-sm cursor-pointer mb-5"> <a href="#"> Orders </a> </li>
-            <li class=" hover:text-titles active:text-titles hover:shadow-sm  cursor-pointer mb-5"> <a href="#"> Settings </a> </li>
-          </ul>
+            <li class=" hover:text-titles active:text-titles hover:shadow-sm cursor-pointer mb-5 float-left m-on  md:float-none"> <a href="#"> Dashboard </a> </li>
+            <li class=" hover:text-titles active:text-titles hover:shadow-sm cursor-pointer mb-5 float-left m-on  md:float-none"> <a href="#"> Personal Information </a> </li>
+            <li class=" hover:text-titles active:text-titles hover:shadow-sm cursor-pointer mb-5 float-left m-on  md:float-none"> <a href="#"> Company Information </a> </li>
+            <li class=" hover:text-titles active:text-titles hover:shadow-sm cursor-pointer mb-5 float-left m-on  md:float-none "> <a href="#"> Messages </a> </li>
+            <li class=" hover:text-titles active:text-titles hover:shadow-sm cursor-pointer mb-5 float-left m-on  md:float-none"> <a href="#"> Orders </a> </li>
+            <li class=" hover:text-titles active:text-titles hover:shadow-sm  cursor-pointer mb-5 float-left m-on md:float-none"> <a href="#"> Settings </a> </li>
+            <li class=" hover:text-titles active:text-titles hover:shadow-sm  cursor-pointer mb-5 float-left m-on md:float-none"> <a href="#"> Top Selling Product Nearby </a> </li>
+            <li class=" hover:text-titles active:text-titles hover:shadow-sm  cursor-pointer mb-5 float-left m-on md:float-none"> <a href="#"> Ranking in Country by Total Sales </a> </li>
+            <li class=" hover:text-titles active:text-titles hover:shadow-sm  cursor-pointer mb-5 float-left m-on md:float-none"> <a href="#"> Ranking in Country by Total Sales </a> </li>  
+        </ul>
         </div>
         <div class="w-6/6 md:w-5/6 bg-white" >
           <div class="bg-white min-h-screen w-full flex flex-col">
             <div class="container md:w-4/6 w-full mx-auto md:mx-14 space-y-3 flex flex-col items-center justify-center px-2">
-                <h1 class="font-poppins text-black text-3xl text-center"> Customer Information</h1>
+                <h1 class="font-poppins text-black text-3xl text-center"> Vendor's Information</h1>
               <div class="bg-white sm:px-6 rounded text-titles w-full md:pt-10">
                 <div class="flex overflow-ellipsis absolute bg-price blur-[250px] w-48 h-48  "></div>
-                <div class="overflow-hidden mx-auto items-center w-40 h-40 bg-gray-200 rounded-full">
-                        <img class="items-center mx-auto mt-5" src="/images/avatar.svg">
-                    </div>
-                <label class="text-titles font-poppins flex mx-auto items-center justify-center mt-2 mb-6 cursor-pointer" for="avatar"> Add Photo
-                    <input  
-                        type="file" accept="image/*" 
-                        class="hidden cursor-pointer " 
-                        name="avatar"
-                        id="avatar"/>  
-                </label>
                 <form>
+                    <label for="Company" class="block mb-2 text-sm font-medium text-titles ">Company Name</label>
                     <input 
                         type="text"
                         class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
                         name="fullname"
-                        placeholder="Name" />
-
+                        placeholder="Company Name" />
+                        
+                        <label for="Location" class="block mb-2 text-sm font-medium text-titles ">Location</label>
                         <input 
                         type="text"
                         class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-12 text-sm font-poppins"
                         name="fullname"
-                        placeholder="Surname" />
+                        placeholder="Location" />
 
+                        <label for="Logo" class="block mb-2 text-sm font-medium text-titles ">Logo</label>
+                        <input 
+                        type="file" accept="image/*"
+                        class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
+                        name="fullname"
+                        placeholder="Logo" />
+
+                        <label for="TaxID" class="block mb-2 text-sm font-medium text-titles ">Tax ID</label>
+                        <input 
+                        type="number"
+                        class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
+                        name="fullname"
+                        placeholder="Tax ID" />
+                        
+                        <label for="Type" class="block mb-2 text-sm font-medium text-titles ">Type</label>
+                        <input 
+                        type="number"
+                        class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
+                        name="fullname"
+                        placeholder="Type" />
+                        
+                        <label for="Phone" class="block mb-2 text-sm font-medium text-titles ">Phone</label>
+                        <input 
+                        type="number"
+                        class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
+                        name="fullname"
+                        placeholder="Phone" />
+
+                        <label for="email" class="block mb-2 text-sm font-medium text-titles ">Email</label>
                         <input 
                         type="email"
                         class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
                         name="fullname"
                         placeholder="Email" />
-
-                        <input 
-                        type="text"
-                        class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
-                        name="fullname"
-                        placeholder="ID" />
-                        
-                        <input 
-                        type="tel"
-                        class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
-                        name="fullname"
-                        placeholder="Phone" />
-                        
-                        <input 
-                        type="text"
-                        class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
-                        name="fullname"
-                        placeholder="Birth Date" />
-
-                        <input 
-                        type="text"
-                        class="block border bg-gray-50 border-gray-200 w-full p-3 px-6 rounded-2xl mb-4  text-sm font-poppins"
-                        name="fullname"
-                        placeholder="Gender" />
                       </form>
                     <button
                         type="submit"
                         class="w-full text-center py-3 rounded-xl bg-titles font-poppins font-normal text-white focus:outline-none my-1"
-                    >Verify</button> 
+                    >Save</button> 
                 </div>
                 </div>
                 </div>
