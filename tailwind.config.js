@@ -2,6 +2,7 @@
 module.exports = {
   content: ["./Pages/*", "index.html"],
   theme: {
+  
     screens: {
       '2xs': '262px',
       'xs': '360px',
@@ -13,8 +14,7 @@ module.exports = {
     },
 
     backgroundImage: {
-      'slider': "url('../images/slider.svg')",
-      'slider2': "url('../images/slider2.svg')",
+      'header': "url('../images/car.svg')",
       'footer': "url('../images/footer.png')"
   },
     
@@ -28,7 +28,8 @@ module.exports = {
       titles: "#020044",
       price: "#0000A2",
       ship: "#096301",
-      lightblue: "#4267B2"
+      lightblue: "#4267B2",
+      brand: "linear-gradient(90deg, #020044 0%, rgba(0, 0, 162, 0.72) 100%)"
     },
     fontFamily: { 
       poppins: "'Poppins', sans-serif",
@@ -36,6 +37,7 @@ module.exports = {
    
      
   },
-  plugins: [],
+  plugins: [
+  ],
 }
 }
