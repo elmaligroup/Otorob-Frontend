@@ -15,7 +15,8 @@ module.exports = {
 
     backgroundImage: {
       'header': "url('../images/car.svg')",
-      'footer': "url('../images/footer.png')"
+      'footer': "url('../images/footer.png')",
+      'gradient': "url('../images/linear.png')"
   },
     
     extend: { 
@@ -29,7 +30,7 @@ module.exports = {
       price: "#0000A2",
       ship: "#096301",
       lightblue: "#4267B2",
-      brand: "linear-gradient(90deg, #020044 0%, rgba(0, 0, 162, 0.72) 100%)"
+      light: "#C5E4FC"
     },
     fontFamily: { 
       poppins: "'Poppins', sans-serif",
